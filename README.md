@@ -1,4 +1,3 @@
-```markdown
 # 🎵 Forgotten Things
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -174,4 +173,3 @@ This project is open source and available under the [MIT License](LICENSE).
 - Thank you to the playtester whose feedback transformed the game from unplayable to engaging.
 - Inspired by rhythm games like *Rhythm Doctor*, *Arcaea*, and *Phigros*.
 - Special thanks to The Curator (fictional) for leaving behind his archive.
-```
