@@ -9,8 +9,6 @@
 
 In a future where physical music is obsolete, you play as a freelance archivist who discovers The Curator’s hidden warehouse. By playing each arcade cabinet correctly, you restore the original recordings, uncover diary pages, and save the archive from demolition.
 
-> 🔗 **[Play the live demo](https://yourusername.github.io/ForgottenThings/)** *(replace with your actual GitHub Pages URL)*
-
 ---
 
 ## ✨ Key Features
@@ -61,8 +59,8 @@ This loop transforms passive listening into an active, rewarding repair process.
 
 Forgotten Things is a client‑side web application with no backend dependencies.
 
-- **Language**: JavaScript (ES6+)
-- **Styling**: CSS3 (animations, Flexbox, custom properties)
+- **Language**: JavaScript
+- **Styling**: CSS
 - **Audio**: HTML5 Audio API
 - **Data Persistence**: Web Storage API (`localStorage`)
 - **Version Control**: Git & GitHub
@@ -125,27 +123,6 @@ Additional QA:
 
 ---
 
-## 📅 Development Timeline
-
-This prototype was built in an **iterative 6‑8 week cycle** by a team of three (conceptually). The current web version represents a playable vertical slice.
-
-| Phase | Focus |
-|-------|-------|
-| **Week 1‑2** | Concept & vision (Draft.pdf) |
-| **Week 3‑4** | Prototype Version #1 (mouse + keyboard, laser trails) |
-| **Week 5** | Playtest analysis & redesign → Version #2 (keyboard only, 7 lanes) |
-| **Week 6** | Web implementation (HTML/CSS/JS), note chart for demo song |
-| **Week 7** | Polish animations, audio integration, localStorage |
-| **Week 8** | Deployment, documentation, playtest video capture |
-
-**Milestones:**
-- ✅ Version #1 playable (failed test)
-- ✅ Version #2 design approved
-- ✅ Web prototype functional
-- ✅ GitHub Pages deployment
-
----
-
 ## 👤 Author
 
 **Changyu Wen**  
@@ -155,7 +132,7 @@ This prototype was built in an **iterative 6‑8 week cycle** by a team of three
   - HTML/CSS/JavaScript implementation
   - Note chart authoring (`song.js`)
   - Visual effects & animations
-  - Playtesting & iterative redesign (based on `Playtest.pdf`)
+  - Playtesting & iterative redesign
 
 *Original concept and design documents by Changyu Wen. The game is inspired by the desire to preserve physical media and the joy of arcade rhythm games.*
 
@@ -165,11 +142,3 @@ This prototype was built in an **iterative 6‑8 week cycle** by a team of three
 
 This project is open source and available under the [MIT License](LICENSE).  
 (Note: The background music `music.mp3` is a placeholder; replace it with royalty‑free or original music for redistribution.)
-
----
-
-## 🙏 Acknowledgments
-
-- Thank you to the playtester whose feedback transformed the game from unplayable to engaging.
-- Inspired by rhythm games like *Rhythm Doctor*, *Arcaea*, and *Phigros*.
-- Special thanks to The Curator (fictional) for leaving behind his archive.
