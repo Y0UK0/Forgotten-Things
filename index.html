@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Forgotten Things</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <audio class="song" src="media/music.mp3"></audio>
+
+    <main>
+      <!-- Decoration Area -->
+      <div class="left-panel">
+        <div class="archive-logo">
+          <span>ARCHIVE</span>
+          <span>2089</span>
+        </div>
+        <div class="curator-quote">
+          "Restore what was lost."
+        </div>
+      </div>
+
+      <!-- Game Section -->
+      <div class="game-area">
+        <div class="game">
+          <div class="game__header">
+            <div class="restoration-status">
+              <span class="status-label">RESTORATION STATUS</span>
+              <span class="status-value" id="restoreState">STANDBY</span>
+            </div>
+          </div>
+
+          <div class="hit">
+            <div class="hit__combo"></div>
+            <div class="hit__accuracy"></div>
+          </div>
+
+          <div class="track-container"></div>
+
+          <div class="key-container">
+            <div class="key key--s key--blue">
+              <div class="keypress keypress--blue"></div>
+              <span>S</span>
+            </div>
+            <div class="key key--d key--pink">
+              <div class="keypress keypress--pink"></div>
+              <span>D</span>
+            </div>
+            <div class="key key--f key--blue">
+              <div class="keypress keypress--blue"></div>
+              <span>F</span>
+            </div>
+            <div class="key key--space key--purple">
+              <div class="keypress keypress--purple"></div>
+              <span>Space</span>
+            </div>
+            <div class="key key--j key--blue">
+              <div class="keypress keypress--blue"></div>
+              <span>J</span>
+            </div>
+            <div class="key key--k key--pink">
+              <div class="keypress keypress--pink"></div>
+              <span>K</span>
+            </div>
+            <div class="key key--l key--blue">
+              <div class="keypress keypress--blue"></div>
+              <span>L</span>
+            </div>
+          </div>
+
+          <div class="game__footer">
+            <div class="combo-meter">
+              <div class="meter-fill" id="comboMeterFill"></div>
+            </div>
+            <div class="current-score">
+              <span>SCORE</span>
+              <span id="liveScore">000000</span>
+            </div>
+          </div>
+
+          <!-- START -->
+          <div class="start-overlay" id="startOverlay">
+            <div class="start-content">
+              <h1 class="glitch-title" data-text="FORGOTTEN THINGS">FORGOTTEN THINGS</h1>
+              <p class="start-subtitle">Curator's Archive · Protocol v.2089</p>
+              <button class="btn-start" id="startRestoreBtn">▶ INITIATE RESTORATION</button>
+              <div class="track-info">
+                <p>Track: Kataware Doki (Lost Recording)</p>
+                <p class="lore-note">"Recovered from Sector 7"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story / Description Panel -->
+      <div class="right-panel">
+        <div class="story-section">
+          <h3>THE CURATOR'S ARCHIVE</h3>
+          <p>In 2089, physical music is obsolete. You are an archivist hired to clear an abandoned warehouse. Inside, you find broken arcade cabinets built to preserve lost songs. Restore them before demolition.</p>
+          <div class="divider"></div>
+          <h4>RESTORATION OBJECTIVES</h4>
+          <ul>
+            <li>Clear audio distortion</li>
+            <li>Reconnect broken circuits</li>
+            <li>Maintain synchronization</li>
+            <li>Unlock Memory Fragments</li>
+          </ul>
+        </div>
+
+        <div class="controls-section">
+          <h4>CONTROLS</h4>
+          <div class="key-guide">
+            <div><kbd>S</kbd> <kbd>D</kbd> <kbd>F</kbd> — Left hand</div>
+            <div><kbd>Space</kbd> — Center</div>
+            <div><kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> — Right hand</div>
+          </div>
+          <h4 style="margin-top: 20px;">SPEED</h4>
+          <div class="speed-buttons">
+            <button class="speed-btn selected" data-speed="1">1x</button>
+            <button class="speed-btn" data-speed="2">2x</button>
+            <button class="speed-btn" data-speed="3">3x</button>
+          </div>
+        </div>
+
+        <div class="result-preview" id="resultPreview">
+        </div>
+      </div>
+
+      <!-- Summary Screen -->
+      <div class="summary" id="summaryScreen">
+        <div class="summary__timer" id="summaryTimer"></div>
+        <div class="summary__result">
+          <h2 class="result__heading">RESTORATION COMPLETE</h2>
+          <div class="result__accuracy perfect">
+            <p class="accuracy__heading">Perfect</p>
+            <span>:</span>
+            <p class="accuracy__count perfect__count"></p>
+          </div>
+          <div class="result__accuracy good">
+            <p class="accuracy__heading">Good</p>
+            <span>:</span>
+            <p class="accuracy__count good__count"></p>
+          </div>
+          <div class="result__accuracy bad">
+            <p class="accuracy__heading">Bad</p>
+            <span>:</span>
+            <p class="accuracy__count bad__count"></p>
+          </div>
+          <div class="result__accuracy miss">
+            <p class="accuracy__heading">Miss</p>
+            <span>:</span>
+            <p class="accuracy__count miss__count"></p>
+          </div>
+          <div class="result__accuracy combo">
+            <p class="accuracy__heading">Max Combo</p>
+            <span>:</span>
+            <p class="accuracy__count combo__count"></p>
+          </div>
+          <div class="result__accuracy score">
+            <p class="accuracy__heading">Score</p>
+            <span>:</span>
+            <p class="accuracy__count score__count"></p>
+          </div>
+          <div class="result__grade" id="finalGrade"></div>
+          <button class="btn-restart" id="restartBtn">RESTORE AGAIN</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="scripts/song.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
